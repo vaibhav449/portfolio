@@ -47,6 +47,11 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { canonical: seo.url },
+  // Google Search Console "HTML tag" verification. Set the env var on the
+  // server (PM2 ecosystem / .env) and the meta tag is emitted automatically.
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export const viewport: Viewport = {
