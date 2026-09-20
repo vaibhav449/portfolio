@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="15" fill="#0A0A0A"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="14.25" fill="none" stroke="#3D63DD" stroke-width="1" opacity="0.55"/>
+  <text x="32" y="43" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif" font-size="30" font-weight="600" letter-spacing="-1" text-anchor="middle" fill="#EDEDED">VC</text>
+</svg>
