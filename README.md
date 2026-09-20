@@ -73,7 +73,7 @@ Things to keep in sync:
 
 - `socials[]` — LinkedIn (`vaibhav-chaubey-00a774329`) and LeetCode (`Vaibhavchaubey007`) handles
 - `seo.url` — set to your deployed domain (used for canonical URLs, OG, sitemap)
-- Replace `public/Vaibhav_Chaubey_Resume.pdf` when your résumé changes.
+- Replace `public/Vaibhav_Chaubey_Resume.pdf` when your résumé changes, and bump the `?v=` on `profile.resumeUrl` so cached copies are invalidated.
 
 The GitHub username (`vaibhav449`) drives the live repos, stats and contribution graph. The LeetCode handle drives the
 stats card. Both use free public image endpoints (`leetcard.jacoblin.cool`, `ghchart.rshah.org`) — if a handle is

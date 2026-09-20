@@ -52,7 +52,8 @@ export const profile = {
     "I'm most interested in the unglamorous parts that make software actually work in production — cost accounting down to the microdollar, atomic claims that survive race conditions, and caches that shave milliseconds off every message. I care about systems that are fast, observable, and cheap to run at scale.",
     "Currently pursuing my B.Tech in Computer Science at IIIT Raichur while interning at Setubridge Technolabs. I've solved 200+ DSA problems and I'm always chasing the next hard systems problem.",
   ],
-  resumeUrl: "/Vaibhav_Chaubey_Resume.pdf",
+  /** Bump the `v` query whenever the PDF in /public is replaced (cache-bust). */
+  resumeUrl: "/Vaibhav_Chaubey_Resume.pdf?v=2026-08-28",
   /** Filename the browser saves the résumé as (served unchanged from /public). */
   resumeFileName: "Vaibhav_Chaubey_Resume.pdf",
   avatar: "/avatar.jpg", // optional real photo; falls back to a generated monogram
