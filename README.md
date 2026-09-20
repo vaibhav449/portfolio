@@ -69,16 +69,15 @@ public/              # résumé PDF, favicon
 
 **All content lives in [`data/resume.ts`](data/resume.ts).** Edit that one file to update the entire site.
 
-A few links were not explicit in the résumé and are **best guesses — please verify/replace**:
+Things to keep in sync:
 
-- `socials[].href` for **LinkedIn** (`https://www.linkedin.com/in/vaibhav-chaubey`)
-- `socials[].href` / handle for **LeetCode** (`https://leetcode.com/u/vaibhav449`)
+- `socials[]` — LinkedIn (`vaibhav-chaubey-00a774329`) and LeetCode (`Vaibhavchaubey007`) handles
 - `seo.url` — set to your deployed domain (used for canonical URLs, OG, sitemap)
 - Replace `public/Vaibhav_Chaubey_Resume.pdf` when your résumé changes.
 
-The GitHub username (`vaibhav449`) drives the live repos, stats and contribution graph. The LeetCode card and
-contribution heatmap use free public image endpoints (`leetcard.jacoblin.cool`, `ghchart.rshah.org`) — if a handle is
-wrong the card simply shows its alt text; everything else keeps working.
+The GitHub username (`vaibhav449`) drives the live repos, stats and contribution graph. The LeetCode handle drives the
+stats card. Both use free public image endpoints (`leetcard.jacoblin.cool`, `ghchart.rshah.org`) — if a handle is
+wrong the LeetCode card renders a "User Not Found" placeholder, so double-check it after changing.
 
 > **Add a real photo (optional):** drop a square image at `public/avatar.jpg`. The hero ships with an elegant generated
 > monogram placeholder, so nothing is required.

@@ -159,7 +159,7 @@ export function Hero() {
               <Magnetic>
                 <Button
                   href={profile.resumeUrl}
-                  download
+                  download={profile.resumeFileName}
                   size="lg"
                   className="group"
                 >

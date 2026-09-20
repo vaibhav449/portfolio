@@ -69,7 +69,8 @@ const personSchema = {
   address: { "@type": "PostalAddress", addressLocality: profile.location },
   sameAs: [
     "https://github.com/vaibhav449",
-    "https://www.linkedin.com/in/vaibhav-chaubey",
+    "https://www.linkedin.com/in/vaibhav-chaubey-00a774329",
+    "https://leetcode.com/u/Vaibhavchaubey007/",
   ],
 };
 

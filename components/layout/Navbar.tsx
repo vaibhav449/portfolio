@@ -35,11 +35,17 @@ export function Navbar() {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-        className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4"
+        className="pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4"
       >
+        {/*
+         * Full-width pill on small screens (brand left, burger right); on
+         * lg+ it shrinks to fit its content so nothing spills outside the
+         * glass surface. `pointer-events` are re-enabled here only, so the
+         * transparent gutter beside the pill never blocks the page.
+         */}
         <nav
           className={cn(
-            "flex w-full max-w-3xl items-center justify-between gap-2 rounded-full border px-3 py-2 transition-all duration-500",
+            "pointer-events-auto flex w-full max-w-3xl items-center justify-between gap-2 rounded-full border px-3 py-2 transition-all duration-500 lg:w-auto lg:max-w-full lg:gap-4",
             scrolled
               ? "glass-strong border-border shadow-card"
               : "border-transparent bg-transparent",
@@ -60,7 +66,7 @@ export function Navbar() {
           </a>
 
           {/* Desktop links */}
-          <ul className="hidden items-center gap-1 md:flex">
+          <ul className="hidden items-center gap-0.5 lg:flex">
             {navLinks.map((link) => {
               const id = link.href.replace("#", "");
               const isActive = active === id;
@@ -69,7 +75,7 @@ export function Navbar() {
                   <a
                     href={link.href}
                     className={cn(
-                      "relative rounded-full px-3.5 py-1.5 text-sm transition-colors",
+                      "relative whitespace-nowrap rounded-full px-3 py-1.5 text-sm transition-colors",
                       isActive
                         ? "text-foreground"
                         : "text-muted-foreground hover:text-foreground",
@@ -95,13 +101,13 @@ export function Navbar() {
               type="button"
               onClick={openPalette}
               aria-label="Open command palette"
-              className="hidden items-center gap-2 rounded-full border border-border bg-card/50 py-1.5 pl-3 pr-2 text-xs text-muted-foreground transition-colors hover:border-foreground/25 hover:text-foreground sm:flex"
+              className="hidden h-9 items-center gap-1.5 rounded-full border border-border bg-card/50 px-3 text-xs text-muted-foreground transition-colors hover:border-foreground/25 hover:text-foreground xl:flex"
             >
               <CommandIcon className="h-3.5 w-3.5" />
-              <span className="font-mono">⌘K</span>
+              <span className="font-mono">K</span>
             </button>
             <ThemeToggle className="hidden h-9 w-9 sm:grid" />
-            <Magnetic strength={0.4} className="hidden md:inline-flex">
+            <Magnetic strength={0.4} className="hidden lg:inline-flex">
               <Button href="#contact" size="sm" variant="default">
                 Let&apos;s talk
               </Button>
@@ -113,7 +119,7 @@ export function Navbar() {
               onClick={() => setMenuOpen((o) => !o)}
               aria-label="Toggle menu"
               aria-expanded={menuOpen}
-              className="grid h-9 w-9 place-items-center rounded-full border border-border bg-card/50 text-foreground md:hidden"
+              className="grid h-9 w-9 place-items-center rounded-full border border-border bg-card/50 text-foreground lg:hidden"
             >
               {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </button>
@@ -128,7 +134,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 md:hidden"
+            className="fixed inset-0 z-40 lg:hidden"
           >
             <div
               className="absolute inset-0 bg-background/80 backdrop-blur-xl"

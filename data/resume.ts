@@ -4,9 +4,8 @@
  * Extracted from Vaibhav Chaubey's résumé and elevated (truthfully) into
  * a portfolio voice. Update this file to update the whole site.
  *
- * NOTE ON LINKS: email, phone and GitHub are verified from the résumé.
- * LinkedIn / LeetCode handles were not explicit in the résumé — the URLs
- * below are best guesses. Verify + edit them (see README "Personalize").
+ * NOTE ON LINKS: email, phone, GitHub, LinkedIn and LeetCode are all
+ * verified. The LeetCode handle also drives the live stats card.
  * ─────────────────────────────────────────────────────────────────────────
  */
 
@@ -54,6 +53,8 @@ export const profile = {
     "Currently pursuing my B.Tech in Computer Science at IIIT Raichur while interning at Setubridge Technolabs. I've solved 200+ DSA problems and I'm always chasing the next hard systems problem.",
   ],
   resumeUrl: "/Vaibhav_Chaubey_Resume.pdf",
+  /** Filename the browser saves the résumé as (served unchanged from /public). */
+  resumeFileName: "Vaibhav_Chaubey_Resume.pdf",
   avatar: "/avatar.jpg", // optional real photo; falls back to a generated monogram
   email: "vaibhavrm6667@gmail.com",
   phone: "+91-7874696877",
@@ -79,14 +80,14 @@ export const socials: SocialLink[] = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/vaibhav-chaubey", // verify in README
-    handle: "vaibhav-chaubey",
+    href: "https://www.linkedin.com/in/vaibhav-chaubey-00a774329",
+    handle: "vaibhav-chaubey-00a774329",
     icon: "linkedin",
   },
   {
     label: "LeetCode",
-    href: "https://leetcode.com/u/vaibhav449", // verify in README
-    handle: "vaibhav449",
+    href: "https://leetcode.com/u/Vaibhavchaubey007/",
+    handle: "Vaibhavchaubey007",
     icon: "leetcode",
   },
   {

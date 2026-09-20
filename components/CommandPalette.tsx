@@ -139,7 +139,15 @@ export function CommandPalette() {
                   />
                   <Item
                     onSelect={() =>
-                      run(() => window.open(profile.resumeUrl, "_blank"))
+                      run(() => {
+                        // Trigger a real file download (not an inline PDF view).
+                        const a = document.createElement("a");
+                        a.href = profile.resumeUrl;
+                        a.download = profile.resumeFileName;
+                        document.body.appendChild(a);
+                        a.click();
+                        a.remove();
+                      })
                     }
                     icon={<FileText className="h-4 w-4" />}
                     label="Download résumé"

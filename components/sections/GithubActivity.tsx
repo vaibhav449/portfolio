@@ -30,8 +30,9 @@ const LANG_COLORS: Record<string, string> = {
   Rust: "#dea584",
 };
 
-const leetcodeHandle =
-  socials.find((s) => s.icon === "leetcode")?.handle ?? githubUsername;
+const leetcodeSocial = socials.find((s) => s.icon === "leetcode");
+const leetcodeHandle = leetcodeSocial?.handle ?? githubUsername;
+const leetcodeUrl = leetcodeSocial?.href ?? `https://leetcode.com/u/${leetcodeHandle}/`;
 
 /**
  * GithubActivity — live open-source presence: profile stats, a contribution
@@ -188,7 +189,7 @@ export function GithubActivity({
           <SpotlightCard accent="electric" className="p-7">
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="flex items-center gap-4">
-                <div className="gradient-border grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-card">
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-[#FFA116]/30 bg-[#FFA116]/10">
                   <LeetCodeIcon className="h-6 w-6 text-[#FFA116]" />
                 </div>
                 <div>
@@ -200,19 +201,32 @@ export function GithubActivity({
                   </p>
                 </div>
               </div>
-              <Badge variant="electric" className="self-start md:self-auto">
-                <span className="font-mono">@{leetcodeHandle}</span>
-              </Badge>
+              <a
+                href={leetcodeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-start md:self-auto"
+              >
+                <Badge variant="electric" className="transition-colors hover:border-electric/60">
+                  <span className="font-mono">@{leetcodeHandle}</span>
+                </Badge>
+              </a>
             </div>
-            <div className="mt-6 overflow-hidden rounded-xl border border-border bg-background/40 p-3">
+            <a
+              href={leetcodeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open LeetCode profile"
+              className="mt-6 block overflow-hidden rounded-xl border border-border bg-background/40 p-3 transition-colors hover:border-foreground/20"
+            >
               {/* External LeetCard SVG; graceful alt fallback if unavailable. */}
               <img
-                src={`https://leetcard.jacoblin.cool/${leetcodeHandle}?theme=dark&font=Space%20Grotesk&ext=heatmap`}
+                src={`https://leetcard.jacoblin.cool/${leetcodeHandle}?theme=dark&font=Space%20Grotesk&ext=heatmap&border=0&radius=12`}
                 alt="LeetCode statistics"
                 loading="lazy"
-                className="mx-auto w-full max-w-xl"
+                className="mx-auto w-full max-w-2xl"
               />
-            </div>
+            </a>
           </SpotlightCard>
         </Reveal>
       </div>
