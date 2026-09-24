@@ -626,7 +626,7 @@ export const seo = {
   siteName: "Vaibhav Chaubey — Portfolio",
   title: "Vaibhav Chaubey · Full-Stack & AI Systems Engineer",
   description:
-    "Vaibhav Chaubey is a full-stack & AI systems engineer building production LLM systems and multi-tenant SaaS. Sole engineer on a live Shopify AI Shopping Assistant.",
+    "Vaibhav Chaubey · full-stack & AI systems engineer building production LLM systems and multi-tenant SaaS. Solo-built a live Shopify AI Shopping Assistant.",
   url: "https://vaibhavchaubey.live", // canonical, sitemap, robots, OG and JSON-LD all derive from this
   keywords: [
     "Vaibhav Chaubey", "Full-Stack Engineer", "AI Engineer", "LLM Systems",
